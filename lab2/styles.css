@@ -1,0 +1,9 @@
+.tittleDiv{
+    background-color: lightblue;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
