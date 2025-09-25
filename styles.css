@@ -1,5 +1,5 @@
 body{
-    background-color: #E0DFD5;
+    background-color: papayawhip;
 }         
 
 * {
@@ -8,7 +8,7 @@ body{
   margin: 0;
 }
 
-header,footer, section, footer {
+header,footer, footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,13 +16,12 @@ header,footer, section, footer {
 }
 
 header {
-  background: #E0DFD5;
+  background: papayawhip;
   position: sticky;
   height: 100px;
   top: 0;
-
   color: black;
- justify-content: space-between;
+  justify-content: space-between;
   padding: 0 20px;
 }
 
@@ -45,7 +44,8 @@ section:nth-child(1) {
   justify-content: center;
   align-items: center;
   color: white;                 
-  text-shadow: 2px 2px 5px black; 
+  text-shadow: 2px 2px 5px black;
+
   
 }
 
@@ -59,11 +59,62 @@ section#hero .motivacional {
   text-shadow: 2px 2px 8px black; 
 }
 
+section#projetos {
+  font-size: 20px;
+  text-align: left;
+}
+
+section#projetos .ProjetosText{
+  text-align:center;
+}
+
+section#projetos .ProjetosTittle {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ProjetosLista {
+  list-style: none;
+  margin: 0 auto;          
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 20px;               
+  justify-content: center; 
+  max-width: 1000px;       
+}
+
+
+.LabBox , .TecBox {
+  list-style: none;
+  flex: 1 1 250px;        
+  max-width: 300px;        
+  padding: 15px;
+  background: #EA1744 ;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-align: center;      
+  box-shadow: 20px 20px 10px rgba(0,0,0,0.1); 
+}
+
+
+.LabBox a {
+  font-weight: bold;
+  color:papayawhip ;
+}
+
+.LabDesc {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: papayawhip;
+}
+
 
 
 section:nth-child(2) {
   height: 100vh;
-  background: orange;
+  background: papayawhip;
   justify-content: left;
 }
 
@@ -76,4 +127,36 @@ footer {
   height: 10vh;
   background: black;
   color: white;
+}
+
+.TecElements{
+  font-size: 20px;
+  color: papayawhip;
+  margin: 10px 0;
+}
+
+section#disciplina .DisText{
+  font-size: 20px;
+  text-align: center;
+  margin: 0 10%;
+  line-height: 1.6;
+}
+
+
+section#disciplina {
+  height: 100vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+section#disciplina .TecContainer{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
