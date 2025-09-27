@@ -1,5 +1,5 @@
 body{
-    background-color: papayawhip;
+    background-color: whitesmoke;
 }         
 
 * {
@@ -16,7 +16,7 @@ header,footer, footer {
 }
 
 header {
-  background: papayawhip;
+  background: whitesmoke;
   position: sticky;
   height: 100px;
   top: 0;
@@ -24,6 +24,7 @@ header {
   justify-content: space-between;
   padding: 0 20px;
 }
+
 
 
 nav a {
@@ -43,8 +44,9 @@ section:nth-child(1) {
   display: flex;                
   justify-content: center;
   align-items: center;
-  color: white;                 
+  color: whitesmoke;                 
   text-shadow: 2px 2px 5px black;
+
 
   
 }
@@ -53,11 +55,14 @@ section#hero .motivacional {
   position: absolute; 
   bottom: 20%;          
   left: 10%;            
-  color: white;
+  color: whitesmoke;
   font-size: 20px;
   font-weight: bold;
   text-shadow: 2px 2px 8px black; 
+
 }
+
+
 
 section#projetos {
   font-size: 20px;
@@ -66,12 +71,14 @@ section#projetos {
 
 section#projetos .ProjetosText{
   text-align:center;
+  margin-bottom: 20px ;
 }
 
 section#projetos .ProjetosTittle {
   font-size: 50px;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 25px;
 }
 
 .ProjetosLista {
@@ -101,20 +108,20 @@ section#projetos .ProjetosTittle {
 
 .LabBox a {
   font-weight: bold;
-  color:papayawhip ;
+  color:whitesmoke ;
 }
 
 .LabDesc {
   margin: 5px 0 0;
   font-size: 0.9rem;
-  color: papayawhip;
+  color: whitesmoke;
 }
 
 
 
 section:nth-child(2) {
   height: 100vh;
-  background: papayawhip;
+  background: whitesmoke;
   justify-content: left;
 }
 
@@ -126,12 +133,12 @@ section:nth-child(3) {
 footer {
   height: 10vh;
   background: black;
-  color: white;
+  color: whitesmoke;
 }
 
 .TecElements{
   font-size: 20px;
-  color: papayawhip;
+  color: whitesmoke;
   margin: 10px 0;
 }
 
@@ -158,5 +165,28 @@ section#disciplina .TecContainer{
   margin-top: 50px;
   display: flex;
   justify-content: center;
+  width: 100%;
+}
+
+.NavElement{
+  border-radius: 10px;
+  background-color: #EA1744;
+  padding: 10px;
+  color:whitesmoke;
+
+}
+
+
+/* Andei a procura no codepen estilos para fazer quebras de linhas mais bonitas e retirei este codigo do codepen -> https://codepen.io/joeyhoer/pen/AgbXOj */
+.vertical-lines {
+  height: 10px;
+  color: #EA1744;
+  background-image: linear-gradient(
+    90deg,
+    currentColor,
+    currentColor 33.33%,
+    transparent 33.33%,
+    transparent 100%);
+  background-size: 3px 100%;
   width: 100%;
 }
