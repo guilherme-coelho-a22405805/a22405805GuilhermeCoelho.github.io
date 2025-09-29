@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  border-bottom: 4px solid #EA1744; 
+  border-bottom: 4px solid #003049; 
 }
 
 h1 {
@@ -26,14 +26,14 @@ h1 {
   align-items: center;
   gap: 15px;
   font-size: 1.8rem;
-  color: #EA1744;
+  color: #003049;
 }
 
 .hamburguer {  /* Usei o codigo disponibilizado no CodePen pelo professor */
   display: none;
   cursor: pointer;
   font-size: 1.5rem;
-  color: #EA1744;
+  color: #003049;
 }
 
 /* Menu */
@@ -44,7 +44,7 @@ nav {
 
 nav a {
   padding: 10px 20px;
-  background-color: #EA1744;
+  background-color: #003049;
   text-decoration: none;
   color: whitesmoke;
   border-radius: 5px;
@@ -80,7 +80,7 @@ nav a:hover {
 /* Conteúdo principal */
 .mainDiv {
   text-align: left;
-  border: 2px solid #EA1744;
+  border: 2px solid #003049;
   margin: 20px;
   background-color: whitesmoke;
   border-radius: 10px;
@@ -93,7 +93,7 @@ footer {
   text-align: center;
   margin-top: 20px;
   padding: 15px;
-  background: #EA1744;
+  background: #003049;
   color: whitesmoke;
 }
 
@@ -136,13 +136,13 @@ table {
   font-size: 1rem;
   text-align: left;
   background: whitesmoke;
-  border: 2px solid #EA1744; /* linha exterior */
+  border: 2px solid #003049; /* linha exterior */
   border-radius: 8px;
   overflow: hidden; /* arredondar cantos */
 }
 
 thead {
-  background: #EA1744;
+  background: #003049;
   color: whitesmoke;
 }
 
@@ -167,7 +167,7 @@ section ul {
 }
 
 section ul li {
-  background: #EA1744;
+  background: #003049;
   color: whitesmoke;
   margin: 10px 0;
   padding: 12px 15px;
@@ -181,5 +181,5 @@ section ul li {
 
 section ul li:hover {
   transform: translateX(5px);
-  background: #c41236; /* tom mais escuro no hover */
+  background: #003049; /* tom mais escuro no hover */
 }

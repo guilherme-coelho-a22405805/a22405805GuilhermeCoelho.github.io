@@ -37,7 +37,7 @@ nav a {
 section#hero {
   height: 100vh;
   position: relative;
-  background-image: url("images/philip-oroni-NDnrY4LjFDU-unsplash.jpg");
+  background-image: url("images/360_F_656056674_MoGgYLJs6OkShEXn4Cik1KWF1w14515z.jpg");
   background-size: cover; /* cobre todo o espaço */
   background-position: center;
   background-repeat: no-repeat;
@@ -97,7 +97,7 @@ section#projetos .ProjetosTittle {
   flex: 1 1 250px; /* Permite que os itens tenham um tamanho mínimo de 250px */
   max-width: 300px;
   padding: 15px;
-  background: #EA1744;
+  background: #003049;
   border-radius: 6px;
   box-sizing: border-box; /* Garante que o padding é incluído na largura total */
   text-align: center;
@@ -106,7 +106,7 @@ section#projetos .ProjetosTittle {
 }
 
 .LabBox:hover {
-  background-color: #c41236;
+  background-color: #003049;
   transform: scale(1.05);
 }
 
@@ -155,7 +155,7 @@ section#disciplina .TecContainer {
 
 .NavElement {
   border-radius: 10px;
-  background-color: #EA1744;
+  background-color: #003049;
   padding: 10px;
   color: whitesmoke;
 }
@@ -180,7 +180,7 @@ footer img {
 /* Andei a procura no codepen estilos para fazer quebras de linhas mais bonitas e retirei este codigo do codepen -> https://codepen.io/joeyhoer/pen/AgbXOj */
 .vertical-lines {
   height: 10px;
-  color: #EA1744;
+  color: #003049;
   background-image: linear-gradient(
     90deg,
     currentColor,
