@@ -1,28 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/lab2/styles.css">
+    <link rel="stylesheet" href="/lab3/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multimedia</title>
-    <header>
-        <div id="tittleDiv" class="tittleDiv">
-             <h1><u><b>Multimedia</b></u></h1>
-        </div>
-        <nav id="navBar" class="navBar">
-            <a class="navElements" href="index.html">Home</a>
-            <a class="navElements" href="local.html">Localização</a>
-            <a class="navElements" href="multimedia.html">Multimédia</a>
-            <a class="navElements" href="info.html">Informação</a>
-        </nav>
-
-        
-
-       <div class="imgDiv">
-        <img src="/lab1/images/Londres.jpg" alt="" style="width: 300px; height: 200px;">
-        </div>
-    
-    </header>
+    <title>Multimédia</title>
     <style>
         .fotografias{
             display:flex;
@@ -36,79 +18,82 @@
             border-radius: 20px;
         }
     </style>
-
 </head>
-
-
 <body>
-    
+    <header>
+        <!-- Barra de navegação -->
+        <div class="topbar">
+            <h1>
+                <span>Multimédia</span>
+                <span class="hamburguer">&#9776;</span>
+            </h1>
+            <nav>
+                <a href="/lab3/index.html">Home</a>
+                <a href="/lab3/info.html">Informação</a>
+                <a href="/lab3/local.html">Localização</a>
+                <a href="/lab3/multimedia.html">Multimédia</a>
+            </nav>
+        </div>
+
+        <!-- Imagem -->
+        <div class="imgDiv">
+            <img src="/lab1/images/Londres.jpg" alt="Vista de Londres" width="600" height="400">
+        </div>
+    </header>
+
     <main>
         <div class="mainDiv">
-            <h2>Multimedia</h2>
+            <h2>Multimédia</h2>
+            <p>Nesta página encontra conteúdos multimédia</p>
+            <p>
+                <a href="#Fotografias">Fotografias</a>
+                <a href="#Video">Vídeo</a>
+                <a href="#Poesia">Poesia</a>
+            </p>
 
-        <p>Nesta página encontra conteúdos multimédia</p>
-        <p>
-            <a href="#Fotografias">Fotografias</a>
-            <a href="#Video">Vídeo</a>
-            <a href="#Poesia">Poesia</a>
-        </p>
+            <section>
+                <h3 id="Fotografias">Fotografias</h3>
+                <div class="fotografias">
+                    <img src="/lab2/images/Londres1.png" alt="">  
+                    <img src="/lab2/images/Londres2.png" alt="">
+                    <img src="/lab2/images/Londres3.png" alt="">
+                    <img src="/lab2/images/Londres4.png" alt="">
+                    <img src="/lab2/images/Londres 5.png" alt="">
+                    <img src="/lab2/images/Londres6.png" alt="">
+                    <img src="/lab2/images/Londres7.png" alt="">
+                    <img src="/lab2/images/Londres8.png" alt=""> 
+                </div>
+            </section>
 
-        <section>
-            <h3 id="Fotografias">Fotografias</h3>
-            <div class ="fotografias">
-                <img src="/lab2/images/Londres1.png" alt="">  
-                <img src="/lab2/images/Londres2.png" alt="">
-                <img src="/lab2/images/Londres3.png" alt="">
-                <img src="/lab2/images/Londres4.png" alt="">
-                <img src="/lab2/images/Londres 5.png" alt="">
-                <img src="/lab2/images/Londres6.png" alt="">
-                <img src="/lab2/images/Londres7.png" alt="">
-                <img src="/lab2/images/Londres8.png" alt=""> 
-            </div>
+            <section>
+                <h3 id="Video">Vídeo</h3>
+                <iframe   src="https://www.youtube.com/embed/jmoPo11ktN4?si=yzh3z92uoGiqSbki" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
 
-        </section>
-
-        <section>
-            <h3 id="Video">Vídeo</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jmoPo11ktN4?si=yzh3z92uoGiqSbki" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
-        </section>
-
-        <section>
-            <h3 id = "Poesia">Poesia</h3>
-            <div>
-                <p>Nas margens do Tâmisa, o tempo se esconde,</p>
-                <p>Entre névoas suaves e o Big Ben que responde.</p>
-                <p>As pontes sussurram histórias antigas,</p>
-                <p>De reis, poetas e almas amigas.</p>
-                <br>
-                <p>Chove um silêncio que dança no chão,</p>
-                <p>Enquanto o metrô leva sonhos na mão.</p>
-                <p>Luzes de Soho, mistério em Notting Hill,</p>
-                <p>Cada rua um romance, cada esquina um perfil.</p>
-                <br>
-                <p>E mesmo cinzenta, Londres reluz,</p>
-                <p>Com charme que o mundo inteiro seduz.</p>
-                <p>Cidade de brumas, de chá e de arte,</p>
-                <p>Onde o passado e o presente caminham à parte.</p>
-
-            </div>
-        </section>
+            <section>
+                <h3 id="Poesia">Poesia</h3>
+                <div>
+                    <p>Nas margens do Tâmisa, o tempo se esconde,</p>
+                    <p>Entre névoas suaves e o Big Ben que responde.</p>
+                    <p>As pontes sussurram histórias antigas,</p>
+                    <p>De reis, poetas e almas amigas.</p>
+                    <br>
+                    <p>Chove um silêncio que dança no chão,</p>
+                    <p>Enquanto o metrô leva sonhos na mão.</p>
+                    <p>Luzes de Soho, mistério em Notting Hill,</p>
+                    <p>Cada rua um romance, cada esquina um perfil.</p>
+                    <br>
+                    <p>E mesmo cinzenta, Londres reluz,</p>
+                    <p>Com charme que o mundo inteiro seduz.</p>
+                    <p>Cidade de brumas, de chá e de arte,</p>
+                    <p>Onde o passado e o presente caminham à parte.</p>
+                </div>
+            </section>
         </div>
-        
-        
     </main>
-    
-
-     
-    
-
-    
 
     <footer>
-        <hr>
         <p>DIW 2025</p>
     </footer>
-    
 </body>
 </html>
