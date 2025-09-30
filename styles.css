@@ -126,7 +126,7 @@ section#disciplina {
   height: 100vh;
   color: black;
   display: flex;
-  flex-direction: column; /* Mobile-first: coluna */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -201,7 +201,7 @@ para a secao corretamente tapava algumas partes por culpa da navbar ser sticky e
 }
 
 
-/*  MEDIA QUERIES - Para tentar melhorar a responsividade pedi ajuda ao chat com o funcionamento inicial da max-widht que estavam com duvidas como funcionava   */
+/*  MEDIA QUERIES - Para tentar melhorar a responsividade    */
 
 
 @media (max-width: 768px) {
