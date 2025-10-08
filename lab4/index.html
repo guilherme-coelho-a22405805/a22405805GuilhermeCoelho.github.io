@@ -1,48 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/lab4/CSS/styles.css">
-    
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
+
+    <!-- 1 -->
     <div class="container0">
-        <p class="p1" >1. Clica no Botão</p>
-        <button class="b1" onclick="Change1()">Click me</button>
+        <p id="text1">1. Clica no Botão</p>
+        <button id="btn1">Click me</button>
     </div>
-    
-    
-    
-    
+
+    <!-- 2 -->
     <div class="container1">
-        <p>2.Pinta-me!</p>
-        <button>Red</button>
-        <button>Blue</button>
-        <button>Green</button>
+        <p id="text2">2. Pinta-me!</p>
+        <button class="paint" data-color="red">Red</button>
+        <button class="paint" data-color="blue">Blue</button>
+        <button class="paint" data-color="green">Green</button>
     </div>
 
+    <!-- 3 -->
     <div class="container2">
-        <p>3.Experimenta escrever!</p>
-        <input type="text" placeholder="...">
+        <p id="text3">3. Experimenta escrever!</p>
+        <input type="text" id="inputText" placeholder="Escreve aqui...">
     </div>
 
+    <!-- 4 -->
     <div class="container3">
-        <p>4.Escolha uma cor em Inglês:</p>
-        <input type="text" name="" id="">
-        <button>Submeter</button>
+        <p>4. Escolhe uma cor (em inglês):</p>
+        <input type="text" id="colorInput" placeholder="ex: yellow">
+        <button id="btnColor">Submeter</button>
     </div>
 
+    <!-- 5 -->
     <div class="container4">
-        <p>5.</p>
-        <button>Conta!</button>
-        <p>20</p>
-
+        <p>5. Contador:</p>
+        <button id="btnCount">Conta!</button>
+        <p id="countValue">20</p>
     </div>
-    
 
-
-    <script src="scripts/main.js"></script>
+    <script src="JS/scripst.js"></script>
 </body>
 </html>

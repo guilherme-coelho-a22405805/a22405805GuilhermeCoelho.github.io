@@ -1,6 +1,13 @@
-.container1, .container2, .container3, .container4 , .container0{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 5px;
+  cursor: pointer;
 }
