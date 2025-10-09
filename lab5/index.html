@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+
+    <main>
+
+        <section id="idPassa">
+        <p>1. Passa por aqui</p>
+
+        <script>
+            // Script para mudar o conteúdo da frase com o mouseOver
+            const frase = document.querySelector("#idPassa");
+
+            function mudarFrase(){
+                frase.textContent = "1. Obrigado por passares !"
+            }
+            function reporFrase(){
+                frase.textContent =  "1. Passa por aqui"
+            }
+
+            frase.onmouseover = mudarFrase;
+            frase.onmouseout = reporFrase;
+            
+        </script>
+
+        </section>
+
+        <section id="mudaCor">
+            <div class="mudaCorDiv">
+                <p id="p2">2. Pinta-me</p>
+                <button class="btn"  id="btnR">Red</button>
+                <button class="btn " id="btnG">Green</button>
+                <button class="btn " id="btnB">Blue</button>
+            </div>
+
+            <script>    
+                const frase2 = document.querySelector("#p2");
+                const botaoRed = document.querySelector("#btnR");
+                const botaoGreen = document.querySelector("#btnG");
+                const botaoBlue = document.querySelector("#btnB");
+
+                function mudarCor(cor){
+                   frase2.style.color = cor;
+                } 
+
+                botaoRed.onclick = () => mudarCor('red');
+                botaoGreen.onclick = () => mudarCor('green');
+                botaoBlue.onclick = () => mudarCor('blue');
+
+            </script>
+        </section>
+
+        <section id="escrever">
+            <p for="input">3. Experimenta escrever</p>
+            <input id="input" type="text">
+
+            <script>
+                const input = document.querySelector("#escrever input");
+
+                const cores = ['red' , 'green' , 'blue' , 'pink' , 'purple']
+                let i = 0 
+                function colorir(){
+                    input.style.backgroundColor = cores[i];
+                    i ++ 
+                    if(i >= 5){
+                        i = 0
+                    }
+                }   
+
+                input.onkeyup = colorir;
+                
+                input
+            </script>
+        </section>
+
+        <section id="mudarBackground">
+            <p class="pMudarBack">4. Escolha uma cor em inglês: </p>
+            <input type="text">
+        </section>
+
+    </main>
+    
+</body>
+</html>

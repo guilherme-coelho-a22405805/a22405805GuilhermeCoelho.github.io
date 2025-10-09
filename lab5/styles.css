@@ -1,0 +1,19 @@
+body{
+    margin: 20px;
+}
+
+.mudaCorDiv{
+    display:flex;
+    gap:10px;
+}
+
+.btn{
+    border-radius: 10px;
+}
+
+#idPassa , #mudaCor , #escrever , #mudarBackground {
+    margin: 10px;
+    display:flex;
+    gap: 10px;
+    
+}
