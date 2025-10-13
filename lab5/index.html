@@ -84,8 +84,101 @@
 
         <section id="mudarBackground">
             <p class="pMudarBack">4. Escolha uma cor em inglês: </p>
-            <input type="text">
+            <input id="inputCor" type="text" placeholder="ex: red, blue, green...">
+
+            <script>
+                // Selecionar o input e a section
+                const inputCor = document.querySelector("#inputCor");
+                const secaoBackground = document.querySelector("#mudarBackground");
+
+                // Função que muda o background conforme o texto escrito
+                function mudarBackground() {
+                    const cor = inputCor.value.toLowerCase(); 
+                    secaoBackground.style.backgroundColor = cor; 
+                }
+
+                
+                inputCor.onkeyup = mudarBackground;
+            </script>
         </section>
+
+        <section id="contar">
+            <p>5. Conta os cliques!</p>
+            <button id="btnContar">Clica aqui</button>
+            <span id="contador">0</span>
+
+            <script>
+                // Selecionar o botão e o texto 
+                const botaoContar = document.querySelector("#btnContar");
+                const textoContador = document.querySelector("#contador");
+
+               
+                let contador = 0;
+
+                // Função que aumenta o valor a cada clique
+                function aumentarContador() {
+                    contador++;
+                    textoContador.textContent = contador;
+                }
+
+                
+                botaoContar.onclick = aumentarContador;
+            </script>
+        </section>
+
+        <section id="nomeIdade">
+            <p>6. Escreve o teu nome e idade:</p>
+            <input id="inputNome" type="text" placeholder="Nome">
+            <input id="inputIdade" type="number" placeholder="Idade">
+            <button id="btnSubmit">Submit</button>
+            <p id="mensagem"></p>
+
+            <script>
+                // Selecionar os elementos
+                const inputNome = document.querySelector("#inputNome");
+                const inputIdade = document.querySelector("#inputIdade");
+                const botaoSubmit = document.querySelector("#btnSubmit");
+                const mensagem = document.querySelector("#mensagem");
+
+                // Função chamada ao clicar no botão
+                function mostrarMensagem() {
+                    const nome = inputNome.value;
+                    const idade = inputIdade.value;
+
+                    if (nome && idade) {
+                        mensagem.textContent = `Olá o ${nome}, tem ${idade} anos.`;
+                    } else {
+                        mensagem.textContent = "Por favor preenche ambos os campos.";
+                    }
+                }
+
+                
+                botaoSubmit.onclick = mostrarMensagem;
+            </script>
+        </section>
+
+
+        <section id="autoClicker">
+            <p>7. Automatic Clicker: <span id="numeroAuto">0</span></p>
+
+            <script>
+                
+                const numeroAuto = document.querySelector("#numeroAuto");
+
+                
+                let contadorAuto = 0;
+
+                // Função que aumenta o número
+                function aumentarAutomaticamente() {
+                    contadorAuto++;
+                    numeroAuto.textContent = contadorAuto;
+                }
+
+                // Chamar a função a cada 1 segundo 
+                setInterval(aumentarAutomaticamente, 1000);
+            </script>
+        </section>
+
 
     </main>
     
