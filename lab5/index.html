@@ -13,53 +13,48 @@
 
     <main>
 
-        <section id="idPassa">
-        <p>1. Passa por aqui</p>
+        <section id="idPassa" class="section">
+            <p>1. Passa por aqui</p>
 
-        <script>
-            // Script para mudar o conteúdo da frase com o mouseOver
-            const frase = document.querySelector("#idPassa");
+            <script>
+                const frase = document.querySelector("#idPassa");
 
-            function mudarFrase(){
-                frase.textContent = "1. Obrigado por passares !"
-            }
-            function reporFrase(){
-                frase.textContent =  "1. Passa por aqui"
-            }
+                // Arrow functions
+                const mudarFrase = () => frase.textContent = "1. Obrigado por passares!";
+                const reporFrase = () => frase.textContent = "1. Passa por aqui";
 
-            frase.onmouseover = mudarFrase;
-            frase.onmouseout = reporFrase;
-            
-        </script>
-
-        </section>
-
-        <section id="mudaCor">
-            <div class="mudaCorDiv">
-                <p id="p2">2. Pinta-me</p>
-                <button class="btn"  id="btnR">Red</button>
-                <button class="btn " id="btnG">Green</button>
-                <button class="btn " id="btnB">Blue</button>
-            </div>
-
-            <script>    
-                const frase2 = document.querySelector("#p2");
-                const botaoRed = document.querySelector("#btnR");
-                const botaoGreen = document.querySelector("#btnG");
-                const botaoBlue = document.querySelector("#btnB");
-
-                function mudarCor(cor){
-                   frase2.style.color = cor;
-                } 
-
-                botaoRed.onclick = () => mudarCor('red');
-                botaoGreen.onclick = () => mudarCor('green');
-                botaoBlue.onclick = () => mudarCor('blue');
-
+                frase.onmouseover = mudarFrase;
+                frase.onmouseout = reporFrase;
             </script>
         </section>
 
-        <section id="escrever">
+
+        <section id="mudaCor" class="section">
+            <div class="mudaCorDiv">
+                <p id="p2">2. Pinta-me!</p>
+
+                <!-- Cada botão tem agora um atributo data-color -->
+                <button class="color" data-color="crimson">Vermelho</button>
+                <button class="color" data-color="forestgreen">Verde</button>
+                <button class="color" data-color="royalblue">Azul</button>
+                <button class="color" data-color="orange">Laranja</button>
+            </div>
+
+            <script>
+                const frase2 = document.querySelector("#p2");
+
+                
+                document.querySelectorAll("button.color").forEach((botao) => {
+                botao.addEventListener("click", () => {
+                    frase2.style.color = botao.dataset.color;
+                    frase2.textContent = `Cor escolhida: ${botao.textContent}!`; 
+                });
+                });
+            </script>
+        </section>
+
+
+        <section id="escrever" class="section">
             <p for="input">3. Experimenta escrever</p>
             <input id="input" type="text">
 
@@ -82,40 +77,46 @@
             </script>
         </section>
 
-        <section id="mudarBackground">
-            <p class="pMudarBack">4. Escolha uma cor em inglês: </p>
-            <input id="inputCor" type="text" placeholder="ex: red, blue, green...">
+        <section id="mudarBackground" class="section">
+            <p class="pMudarBack">4. Escolha uma cor em inglês:</p>
+
+            <!-- Substituímos o input por um select -->
+            <select id="selectCor">
+                <option value="">-- Escolha uma cor --</option>
+                <option value="white">White</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="pink">Pink</option>
+                <option value="purple">Purple</option>
+                <option value="orange">Orange</option>
+            </select>
 
             <script>
-                // Selecionar o input e a section
-                const inputCor = document.querySelector("#inputCor");
+                
                 const secaoBackground = document.querySelector("#mudarBackground");
 
-                // Função que muda o background conforme o texto escrito
-                function mudarBackground() {
-                    const cor = inputCor.value.toLowerCase(); 
-                    secaoBackground.style.backgroundColor = cor; 
-                }
-
-                
-                inputCor.onkeyup = mudarBackground;
+                // Detectar mudança no select
+                document.querySelector("#selectCor").onchange = function () {
+                secaoBackground.style.backgroundColor = this.value;
+                };
             </script>
         </section>
 
-        <section id="contar">
+
+        <section id="contar" class="section">
             <p>5. Conta os cliques!</p>
             <button id="btnContar">Clica aqui</button>
             <span id="contador">0</span>
 
             <script>
-                // Selecionar o botão e o texto 
+                
                 const botaoContar = document.querySelector("#btnContar");
                 const textoContador = document.querySelector("#contador");
 
                
                 let contador = 0;
 
-                // Função que aumenta o valor a cada clique
                 function aumentarContador() {
                     contador++;
                     textoContador.textContent = contador;
@@ -126,58 +127,64 @@
             </script>
         </section>
 
-        <section id="nomeIdade">
+        <section id="nomeIdade" class="section">
             <p>6. Escreve o teu nome e idade:</p>
-            <input id="inputNome" type="text" placeholder="Nome">
-            <input id="inputIdade" type="number" placeholder="Idade">
-            <button id="btnSubmit">Submit</button>
+
+            <form id="formNomeIdade">
+                <input id="inputNome" type="text" placeholder="Nome" required>
+                <input id="inputIdade" type="number" placeholder="Idade" required>
+                <input type="submit" value="Submit">
+            </form>
+
             <p id="mensagem"></p>
 
             <script>
-                // Selecionar os elementos
-                const inputNome = document.querySelector("#inputNome");
-                const inputIdade = document.querySelector("#inputIdade");
-                const botaoSubmit = document.querySelector("#btnSubmit");
+                const form = document.querySelector("#formNomeIdade");
+                const nome = document.querySelector("#inputNome");
+                const idade = document.querySelector("#inputIdade");
                 const mensagem = document.querySelector("#mensagem");
 
-                // Função chamada ao clicar no botão
-                function mostrarMensagem() {
-                    const nome = inputNome.value;
-                    const idade = inputIdade.value;
+                // Evento onsubmit do formulário
+                form.onsubmit = (e) => {
+                e.preventDefault(); 
 
-                    if (nome && idade) {
-                        mensagem.textContent = `Olá o ${nome}, tem ${idade} anos.`;
-                    } else {
-                        mensagem.textContent = "Por favor preenche ambos os campos.";
-                    }
+                if (nome.value && idade.value) {
+                    mensagem.textContent = `Olá, o/a ${nome.value} tem ${idade.value} anos!`;
+                } else {
+                    mensagem.textContent = "Por favor preenche ambos os campos.";
                 }
-
-                
-                botaoSubmit.onclick = mostrarMensagem;
+                };
             </script>
         </section>
 
 
-        <section id="autoClicker">
+
+        <section id="autoClicker" class="section">
             <p>7. Automatic Clicker: <span id="numeroAuto">0</span></p>
 
             <script>
-                
                 const numeroAuto = document.querySelector("#numeroAuto");
 
-                
-                let contadorAuto = 0;
-
-                // Função que aumenta o número
-                function aumentarAutomaticamente() {
-                    contadorAuto++;
-                    numeroAuto.textContent = contadorAuto;
+                if (!localStorage.getItem("contadorAuto")) {
+                localStorage.setItem("contadorAuto", 0);
                 }
 
-                // Chamar a função a cada 1 segundo 
+                // Lê o valor guardado e mostra no ecrã
+                let contadorAuto = parseInt(localStorage.getItem("contadorAuto"));
+                numeroAuto.textContent = contadorAuto;
+
+                function aumentarAutomaticamente() {
+                contadorAuto++;
+                numeroAuto.textContent = contadorAuto;
+
+                // Atualiza o valor guardado no localStorage
+                localStorage.setItem("contadorAuto", contadorAuto);
+                }
+
                 setInterval(aumentarAutomaticamente, 1000);
             </script>
         </section>
+
 
 
     </main>
