@@ -1,0 +1,97 @@
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background-color: whitesmoke;
+}
+
+header , footer {
+  background-color: #add8e6;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: lightblue 5px 5px 15px;
+}
+
+footer {
+    text-align: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: black 3px 3px 10px;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+  box-shadow: lightblue 3px 3px 10px;
+}
+
+.ProductSelection {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+article {
+  background-color: white;
+  border: 2px solid #add8e6;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+article:hover {
+  transform: scale(1.02);
+}
+
+figure {
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+button.add {
+  background-color: #add8e6;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button.add:hover {
+  background-color: #0077b6;
+  color: white;
+}
