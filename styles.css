@@ -3,22 +3,26 @@ body {
 }
 
 * {
-  font-family: sans-serif;
+  font-family: 'Cosmic Sans MS' , cursive;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-header,footer {
+html {
+  scroll-behavior: smooth;
+}
+
+/* Edição do Header -------------------------------------------------------------------------------------------------- */
+
+header {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5vh;
-}
-
-header {
   background: whitesmoke;
-  position: sticky;
   top: 0;
+  position: sticky;
   z-index: 9999;
   height: 100px;
   color: black;
@@ -33,11 +37,31 @@ nav a {
   font-size: 2.5vh;
 }
 
-/* Hero Section */
+.NavElement {
+  border-radius: 10px;
+  background-color: rgb(97, 117, 67);
+  padding: 10px;
+  color: whitesmoke;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.NavElement:hover {
+  background-color: whitesmoke;
+  color: rgb(97, 117, 67);
+  transition: 0.6s;
+  border-radius: 10px;
+  border-color: rgb(97, 117, 67);
+}
+
+
+
+
+/* Hero Section ----------------------------------------------------------------------------------------------------- */
+
 section#hero {
   height: 100vh;
   position: relative;
-  background-image: url("images/360_F_656056674_MoGgYLJs6OkShEXn4Cik1KWF1w14515z.jpg");
+  background-image: url("/images/header-image.jpg");
   background-size: cover; /* cobre todo o espaço */
   background-position: center;
   background-repeat: no-repeat;
@@ -48,24 +72,27 @@ section#hero {
   text-shadow: 2px 2px 5px black;
 }
 
-section#hero .motivacional {
-  position: absolute;
-  bottom: 20%;
-  left: 10%;
-  color: whitesmoke;
-  font-size: 20px;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px black;
-  z-index: 1;
+section#hero .heroContent {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 40px;
+  border-radius: 10px;
+
 }
 
 
-/* Projetos */
+
+
+/* Projetos ------------------------------------------------------------------------------------------------------- */
 section#projetos {
   min-height: 100vh;
   background: whitesmoke;
   font-size: 20px;
   text-align: left;
+  background-image: url(https://img.freepik.com/free-vector/green-watercolor-beige-background_53876-114427.jpg);
+  background-size: cover; /* cobre todo o espaço */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 section#projetos .ProjetosText {
@@ -85,45 +112,60 @@ section#projetos .ProjetosTittle {
   margin: 0 auto;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
-  gap: 20px; /* Espaçamento entre os itens */
+  flex-wrap: wrap;
+  gap: 20px; 
   justify-content: center;
   max-width: 1000px;
 }
 
+/* Edição das caixas de projetos e mais  ---------------------------------------------------------------------------------- */
+
 .LabBox,
 .TecBox {
   list-style: none;
-  flex: 1 1 250px; /* Permite que os itens tenham um tamanho mínimo de 250px */
+  flex: 1 1 250px;
   max-width: 300px;
   padding: 15px;
-  background: #003049;
+  background: beige;
   border-radius: 6px;
-  box-sizing: border-box; /* Garante que o padding é incluído na largura total */
+  box-sizing: border-box;
   text-align: center;
   box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
 }
 
 .LabBox:hover {
-  background-color: #003049;
+  background-color: rgb(144, 168, 109);
   transform: scale(1.05);
 }
 
 .LabBox a {
   font-weight: bold;
+  color: black;
+}
+
+.LabBox a:hover {
   color: whitesmoke;
+  transition: 0.3s ;
 }
 
 .LabDesc {
   margin: 5px 0 0;
   font-size: 0.9rem;
-  color: whitesmoke;
+  color: black;
 }
 
-/* Disciplina */
+.LabDesc:hover {
+  color: whitesmoke;
+  transition: 0.3s ;
+}
+
+
+
+/* Disciplina --------------------------------------------------------------------------------------------------------- */
 section#disciplina {
   height: 100vh;
+  background: rgb(214, 231, 214);
   color: black;
   display: flex;
   flex-direction: column; 
@@ -149,27 +191,25 @@ section#disciplina .TecContainer {
 
 .TecElements {
   font-size: 20px;
-  color: whitesmoke;
+  color: black;
   margin: 10px 0;
 }
 
-.NavElement {
-  border-radius: 10px;
-  background-color: #003049;
-  padding: 10px;
-  color: whitesmoke;
-}
+
+
+/* Footer ------------------------------------------------------------------------------------------------------------ */
+
 
 footer {
   height: auto;
   background: black;
   color: whitesmoke;
   display: flex;
-  flex-direction: column; /* Melhor alinhamento em mobile */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 20px;
+  gap: 2px;
+  padding: 5px;
 }
 
 footer img {
@@ -177,28 +217,28 @@ footer img {
   height: auto;
 }
 
-/* Andei a procura no codepen estilos para fazer quebras de linhas mais bonitas e retirei este codigo do codepen -> https://codepen.io/joeyhoer/pen/AgbXOj */
-.vertical-lines {
-  height: 10px;
-  color: #003049;
-  background-image: linear-gradient(
-    90deg,
-    currentColor,
-    currentColor 33.33%,
-    transparent 33.33%,
-    transparent 100%
-  );
-  background-size: 3px 100%;
-  width: 100%;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
 }
+
+
+
+
 
 /* Pedi esta duvida ao chatgpt portanto vou comentar , eu tinha um problema em que quando clicava no botao projetos ou disciplina, a pagina nao fazia scroll 
 para a secao corretamente tapava algumas partes por culpa da navbar ser sticky então o chatgpt sugeriu adicionar scroll-margin-top que ajusta a altura do nav
 */
 #projetos,
 #disciplina {
-  scroll-margin-top: 120px; /* altura do header, navbar sticky */
+  scroll-margin-top: 120px; 
 }
+
+
+
+
 
 
 /*  MEDIA QUERIES - Para tentar melhorar a responsividade    */
@@ -206,7 +246,7 @@ para a secao corretamente tapava algumas partes por culpa da navbar ser sticky e
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column; /* Header em coluna */
+    flex-direction: column; 
     height: auto;
     padding: 10px;
     text-align: center;
@@ -222,7 +262,7 @@ para a secao corretamente tapava algumas partes por culpa da navbar ser sticky e
   }
 
   .ProjetosLista {
-    flex-direction: column; /* Cards em coluna */
+    flex-direction: column; 
     align-items: center;
   }
 

@@ -175,6 +175,7 @@ produtos.forEach(produto => {
 });
 
 
+
 function adicionarAoCesto(produto) {
   const item = document.createElement('li');
   item.innerHTML = `
