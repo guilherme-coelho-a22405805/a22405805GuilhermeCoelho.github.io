@@ -61,8 +61,8 @@ nav a {
 section#hero {
   height: 100vh;
   position: relative;
-  background-image: url("/workspaces/guilherme-coelho.github.io/images/header-image.jpg");
-  background-size: cover; /* cobre todo o espaço */
+  background-image: url("images/header-image.jpg");
+  background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
