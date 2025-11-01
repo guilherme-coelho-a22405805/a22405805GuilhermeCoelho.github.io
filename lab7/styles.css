@@ -135,3 +135,91 @@ button.remove:hover {
   border-radius: 8px;
   font-size: 16px;
 }
+
+/* ---------- Checkout ---------- */
+#carrinho-checkout, #dados-cliente, #resultado-compra {
+  background-color: white;
+  border: 2px solid #add8e6;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#carrinho-checkout ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#carrinho-checkout li {
+  background-color: #f0f8ff;
+  border: 1px solid #add8e6;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dados-cliente label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+#dados-cliente input[type="text"], #dados-cliente input[type="checkbox"] {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#dados-cliente button {
+  background-color: #add8e6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+#dados-cliente button:hover {
+  background-color: #0077b6;
+  color: white;
+}
+
+#resultado-compra {
+  text-align: center;
+}
+
+#resultado-compra p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+#voltar {
+  display: block;
+  margin: 20px auto;
+  background-color: #add8e6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+#voltar:hover {
+  background-color: #0077b6;
+  color: white;
+}
+
+#voltar a {
+  text-decoration: none;
+  color: inherit;
+}

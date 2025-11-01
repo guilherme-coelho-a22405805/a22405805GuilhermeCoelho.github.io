@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - DEISI Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+
+  <main>
+    <section id="carrinho-checkout">
+      <h2>Produtos Selecionados</h2>
+      <ul id="checkout-lista"></ul>
+      <p id="checkout-total">Total: 0 €</p>
+    </section>
+
+    <section id="dados-cliente">
+      <h2>Dados do Cliente</h2>
+      <form id="form-compra">
+        <label>Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label><input type="checkbox" id="estudante"> Sou estudante</label>
+
+        <label>Cupão:</label>
+        <input type="text" id="cupao" placeholder="ex: black-friday">
+
+        <button type="submit">Finalizar Compra</button>
+      </form>
+    </section>
+
+    <section id="resultado-compra" style="display:none;">
+      <h2>Resumo da Compra</h2>
+      <p id="mensagem"></p>
+      <p id="referencia"></p>
+      <p id="total-final"></p>
+    </section>
+
+    <button id="voltar"><a href="index.html">Voltar para a Loja</a></button>
+
+  </main>
+
+  <script src="scripts-checkout.js"></script>
+</body>
+</html>
