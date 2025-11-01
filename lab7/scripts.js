@@ -39,7 +39,7 @@ function mostrarProdutos(produtos) {
       </figure>
       <h3>${produto.title}</h3>
       <p><b>Preço:</b> ${produto.price} €</p>
-      <p><b>Categoria:</b> ${produto.category.name}</p>
+      <p><b>Categoria:</b> ${produto.category}</p>
       <p>${produto.description}</p>
       <p><b>⭐ ${produto.rating.rate}</b> (${produto.rating.count} avaliações)</p>
       <button class="add">Adicionar ao Carrinho</button>
