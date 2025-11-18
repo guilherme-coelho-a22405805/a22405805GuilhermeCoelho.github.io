@@ -16,36 +16,41 @@
     </header>
 
     <main>
+
+        <!----------------------------------------------------------------------------------------------->
+
         <section class="ProductSelection">
-        <h2>Escolha os seus produtos</h2>
+            <h2>Escolha os seus produtos</h2>
 
-        <label for="filtro-categorias">Filtrar por categoria:</label>
-        <select id="filtro-categorias">
-            <option value="all">Todas as categorias</option>
-        </select>
+            <label for="filtro-categorias">Filtrar por categoria:</label>
 
-        <label for="ordenar-preco">Ordenar:</label>
-            <select id="ordenar-preco">
-                <option value="default">Ordenar pelo preço</option>
-                <option value="asc">Preço Crescente</option>
-                <option value="desc">Preço Decrescente</option>
-            </select>
+                <select id="filtro-categorias">
+                    <option value="all">Todas as categorias</option>
+                </select>
 
-        <label for="pesquisa-produto">Procurar:</label>
-        <input type="text" id="pesquisa-produto" placeholder="pesquise por produto">
+            <label for="ordenar-preco">Ordenar:</label>
 
+                <select id="ordenar-preco">
+                    <option value="default">Ordenar pelo preço</option>
+                    <option value="asc">Preço Crescente</option>
+                    <option value="desc">Preço Decrescente</option>
+                </select>
 
-        
+            <label for="pesquisa-produto">Procurar:</label>
 
-        <section id="lista-produtos"></section>
+            <input type="text" id="pesquisa-produto" placeholder="pesquise por produto">
+
+            <section id="lista-produtos"></section>
         </section>
 
+        <!-------------------------------------------------------------------------------------------------->
 
         <section class="ProductSelected">
             <h2>Produtos Selecionados</h2>
             <ul id="carrinho-lista"></ul>
             <p id="total"> Total: 0 €</p>
         </section>
+        
     </main>
 
     <footer class="footer">
