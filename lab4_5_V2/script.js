@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
   changeColorOfBackgroundWithColorChoose();
   countButton();
   liveCharacterCounter();
+  createAgeAndNameForms();
 });
 
 
@@ -99,5 +100,19 @@ function keyDetectionGame() {
     const text3 = document.getElementById("text3");
     text3.addEventListener("keydown" , () =>{
         text3.textContent = text3.key;
+    });
+}
+
+
+
+// Lab 8 -> Age and Name forms
+function createAgeAndNameForms() {
+    const inputBox4 = document.getElementById("inputBox4");
+    const inputBox5 = document.getElementById("inputBox5");
+    const subBt2 = document.getElementById("subBt2");
+    const text4 = document.getElementById("text4");
+    
+    subBt2.addEventListener("click" , () =>{
+        text4.textContent = "Olá eu sou " +  inputBox4.value + "e a minha idade é " + inputBox5.value;
     });
 }
