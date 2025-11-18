@@ -1,0 +1,14 @@
+body{
+    background-color: lightcyan;
+}
+
+
+section{
+    display: flex;
+    gap: 5px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
